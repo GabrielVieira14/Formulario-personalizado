@@ -1,0 +1,183 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   background-color: #121329fd;
+}
+
+.container_form{
+   background-color: #020314;
+   color: #f0f8ff;
+
+   width: 70vh;
+   height: 80vh;
+   
+   border-radius: 10px;
+   
+   position: relative;
+
+   overflow: hidden;
+}
+
+.container_form .formulario h2{
+   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   font-weight: 100;
+   font-size: 21pt;
+   margin: auto auto 1.3rem;
+
+   text-align: center;
+}
+
+.container_form form{
+   position: absolute;
+   inset: 4px;
+   background-color: #222222;
+   padding: 30px 40px;
+   border-radius: 8px;
+   z-index: 2;
+}
+
+
+.formulario label, input{
+   display: block;
+}
+
+.formulario input{
+   position: relative;
+   width: 100%;
+   padding: 15px 10px;
+   margin: 1px auto 20px;
+   /* background: transparent; */
+   outline: none;
+   border: none;
+   border-radius: 5px;
+   /* color: #f0f8ff; */
+
+   transition: 0.5s;
+
+}
+
+.formulario label{
+   color: #f0f8ff;
+   font-size: 14pt;
+   padding: 20px 10px 2px;
+
+}
+
+#submit{
+   width: 33%;
+   padding: 10px;
+
+   outline: none;
+   border: none;
+   border-radius: 5px;
+   
+   color: #020314fd;
+   font-weight: bold;
+}
+
+#submit:hover{
+   cursor: pointer;
+}
+
+.container_form form .link_div{
+   display: flex;
+   justify-content: space-between;
+}
+
+.container_form form .link_div a{
+   margin: 10px 0 20px;
+   font-size: 0.75em;
+   color: #8f8f8f;
+   text-decoration: none;
+   font-size: 10pt;
+}
+
+.container_form form .link_div a:hover,
+.container_form form .link_div a:nth-child(2){
+   color: #fff;
+}
+
+/* animation */
+.color1::before{
+   content: '';
+   position: absolute;
+   top: -50%;
+   left: -50%;
+   width: 380px;
+   height: 420px;
+   background: linear-gradient(0deg, transparent,transparent, #093e85, #45f3ff, #093e85);
+   z-index: 1;
+   transform-origin: bottom right;
+   animation: animate 6s linear infinite;
+
+}
+
+.color1::after{
+   content: '';
+   position: absolute;
+   top: -50%;
+   left: -50%;
+   width: 380px;
+   height: 420px;
+   background: linear-gradient(0deg, transparent,transparent, #093e85, #45f3ff, #093e85);
+   z-index: 1;
+   transform-origin: bottom right;
+   animation: animate 6s linear infinite;
+   animation-delay: -3s;
+}
+
+.color2{
+   position: absolute;
+   top: 0;
+   inset: 0;
+}
+
+.color2::before{
+   content: '';
+   position: absolute;
+   top: -50%;
+   left: -50%;
+   width: 380px;
+   height: 420px;
+   background: linear-gradient(0deg, transparent,transparent, #e70b0b, #ff2770, #ff2770);
+   z-index: 1;
+   transform-origin: bottom right;
+   animation: animate 6s linear infinite;
+   animation-delay: -1.5s;
+}
+
+.color2::after{
+   content: '';
+   position: absolute;
+   top: -50%;
+   left: -50%;
+   width: 380px;
+   height: 420px;
+   background: linear-gradient(0deg, transparent,transparent, #e70b0b, #ff2770, #e70b0b);
+   z-index: 1;
+   transform-origin: bottom right;
+   animation: animate 6s linear infinite;
+   animation-delay: -4.5s;
+
+}
+
+@keyframes animate{
+   0%{
+      transform: rotate(0deg);
+   }
+   100%{
+      transform: rotate(360deg);
+   }
+}
+
+/* fim animation */
